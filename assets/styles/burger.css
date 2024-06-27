@@ -1,0 +1,84 @@
+.logo-link {
+  position: relative;
+  z-index: 1;
+}
+
+.burger-menu {
+  position: relative;
+  border: none;
+  width: 60px;
+  height: 50px;
+  background: transparent;
+  display: block;
+  z-index: 1;
+}
+
+.burger-menu::before,
+.burger-menu::after {
+  content: "";
+  left: 0;
+  position: absolute;
+  background-color: black;
+  border-radius: 100px;
+  width: 100%;
+  height: 10px;
+  display: block;
+  transition: 0.5s;
+}
+
+.burger-menu::before {
+  top: 0;
+  box-shadow: 0 20px 0 #000;
+}
+.burger-menu::after {
+  bottom: 0;
+}
+
+body {
+  position: relative;
+}
+.overflow {
+  overflow: hidden;
+}
+nav {
+  display: block;
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: calc(100% - 99px);
+  top: 99px;
+  left: 0;
+  z-index: 2;
+  transition: 0.3s ease-in-out;
+  transform: translateX(100%);
+  padding-top: 112px;
+  border-top: 5px solid black;
+}
+.visible {
+  transform: none;
+}
+
+.header-list {
+  flex-direction: column;
+  gap: 143px 0;
+}
+
+.header-list a {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.header {
+  background-color: white;
+  z-index: 3;
+}
+
+.burger-close::before {
+  box-shadow: none;
+  rotate: 45deg;
+  top: 20px;
+}
+.burger-close::after {
+  rotate: -45deg;
+  top: 20px;
+}
